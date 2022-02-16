@@ -11,14 +11,28 @@
 <body>
     <section class="container d-flex justify-content-center my-3 align-items-center">
         <h1>My Money</h1>
-        <i class="fa-solid d-inline-block fs-1 ms-3 fa-money-bill-1"></i>
+        <i class="fa-solid d-inline-block fs-1 fa-money-bill-1"></i>
     </section>
     <section class="container my-3">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col">
                 <div class="img">
                     <img src="images/image.jpg" alt="">
                 </div>
+            </div>
+            <div class="col">
+                <div class="input-field d-grid justify-content-center">
+                    <h4 class="text-center">Income</h4>
+                    <p class="text-end">Income: <input class="bg-secondary rounded border-0" type="text" name="" id="income"></p>
+                    <h4 class="text-center">Expenses</h4>
+                    <p class="text-end">Food: <input class="bg-secondary rounded border-0" type="text" name="" id="food"></p>
+                    <p class="text-end">Rent: <input class="bg-secondary rounded border-0" type="text" name="" id="rent"></p>
+                    <p class="text-end">Clothes: <input class="bg-secondary rounded border-0" type="text" name="" id="clothes"></p>
+                    <p class="text-center"><button class="btn btn-primary">Calculate</button></p>
+                    <p class="text-center">Total Expenses: <span id="expense">5500</span></p>
+                    <p class="text-center">Balance: <span id="balance">4500</span></p>
+                </div>
+                <p class="text-center">Save: <input class="w-25 d-inline-block me-2" type="text" name="" id="percentage">% <button class="btn btn-primary mb-1">Save</button></p>
             </div>
         </div>
     </section>
