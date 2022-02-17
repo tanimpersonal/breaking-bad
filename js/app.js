@@ -25,6 +25,10 @@ document.getElementById('calculate').addEventListener('click', function () {
             remainingBalance = balance(incomeValue, totalExpense);
             remBalance.innerText = remainingBalance;
             expense.innerText = totalExpense;
+            disabler(income);
+            disabler(food);
+            disabler(rent);
+            disabler(clothes);
             // enable button if expense and balance is calculated
             if (expense.innerText != '' || remBalance.innerText != '') {
                 document.getElementById('save-button').removeAttribute('disabled');
@@ -35,13 +39,13 @@ document.getElementById('calculate').addEventListener('click', function () {
                 const saving = document.getElementById('saving');
                 const percentageValue = parseInt(percentage.value);
                 const remainingSave = document.getElementById('remaining');
-                console.log(remainingBalance);
                 let savedAmount = save(incomeValue, percentageValue);
                 // check if percentage is not negative and a number
                 if (percentageValue >= 0 && isNaN(percentageValue) == false && savedAmount < remainingBalance) {
                     saving.innerText = savedAmount;
                     let totalRem = remainingBalance - savedAmount;
                     remainingSave.innerText = totalRem;
+                    disabler(percentage);
                 } else {
                     const modalText = document.getElementById('modal-text');
                     modalText.innerText = 'Your percentage is either bigger than the available balance or its negative or not a number!'
@@ -111,6 +115,10 @@ function modal() {
     document.getElementById('close').addEventListener('click', function () {
         document.getElementById('my-modal').style.display = 'none';
     })
+}
+
+function disabler(parameter){
+    parameter.setAttribute('disabled',true);
 }
 // modal close open end
 
