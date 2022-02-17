@@ -44,7 +44,7 @@ document.getElementById('calculate').addEventListener('click', function () {
                     remainingSave.innerText = totalRem;
                 } else {
                     const modalText = document.getElementById('modal-text');
-                    modalText.innerText = 'Your percentage is either bigger than the income or its negative or not a number!'
+                    modalText.innerText = 'Your percentage is either bigger than the available balance or its negative or not a number!'
                     modal();
 
                 }
