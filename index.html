@@ -9,9 +9,8 @@
     <title>My Cost</title>
 </head>
 <body>
-    <section class="container d-flex justify-content-center my-3 align-items-center">
-        <h1>My Money</h1>
-        <i class="fa-solid d-inline-block fs-1 fa-money-bill-1"></i>
+    <section class="my-3 text-xl-center text-center">
+        <h1>My Money<i class="fa-solid fs-1 fa-money-bill-1"></i></h1>
     </section>
     <section class="container my-3">
         <div class="row align-items-center">
@@ -38,15 +37,15 @@
                                   <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                  <p>Modal body text goes here.</p>
+                                  <p id="modal-text"></p>
                                 </div>
                               </div>
                             </div>
                           </div>
                 </div>
-                <p class="text-center">Save: <input class="w-25 d-inline-block me-2" type="text" name="" id="percentage">% <button class="btn btn-primary mb-1">Save</button></p>
-                <p class="text-center">Saving Amount: <span id="saving">2000</span></p>
-                <p class="text-center">Remaining Balance: <span id="remaining">4500</span></p>
+                <p class="text-center">Save: <input class="w-25 d-inline-block me-2" type="text" name="" id="percentage">% <button class="btn btn-primary mb-1" id="save-button" disabled>Save</button></p>
+                <p class="text-center">Saving Amount: <span id="saving"></span></p>
+                <p class="text-center">Remaining Balance: <span id="remaining"></span></p>
             </div>
         </div>
     </section>
